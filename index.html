@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>Glowing Animated Search Bar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="tutorial">
+  <h1><span>Glowing animated Search</span><br>Bar Using HTML CSS</h1>
+
+  <section class="demo-frame" aria-label="Search bar demonstration">
+    <div class="demo-stage">
+      <div class="search-wrap" id="searchWrap">
+        <form class="search-bar" id="searchForm" role="search">
+          <button class="search-submit" type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m16 16 4.5 4.5"/></svg>
+          </button>
+          <label class="visually-hidden" for="search-input">Search</label>
+          <input id="search-input" placeholder="Search..." type="text" name="text" class="input" aria-label="Search" autocomplete="off">
+          <button class="filter-toggle" type="button" id="filterToggle" aria-label="Open search filters" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l-6.2 7.2v5.1l-3.6 1.8v-6.9L4 5Z"/></svg>
+          </button>
+        </form>
+        <div class="filter-menu" id="filterMenu" hidden>
+          <p>Search filters</p>
+          <label><input type="checkbox" value="people"> People</label>
+          <label><input type="checkbox" value="posts"> Posts</label>
+          <label><input type="checkbox" value="projects"> Projects</label>
+          <button type="button" id="applyFilters">Apply filters</button>
+        </div>
+      </div>
+      <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div class="comment-banner">Comment ‘Search’ for the code. Follow me so I can send it.</div>
+
+  <section class="code-window" aria-label="HTML source preview">
+    <div class="window-top">
+      <div class="traffic"><i></i><i></i><i></i></div>
+      <span class="html-icon">5</span>
+      <span class="file-name">index.html</span>
+    </div>
+    <pre><code><tag>&lt;div</tag> <attr>id</attr>=<str>"main"</str><tag>&gt;</tag>
+  <tag>&lt;label</tag> <attr>for</attr>=<str>"search-input"</str>
+    <attr>class</attr>=<str>"visually-hidden"</str><tag>&gt;</tag>
+    Search
+  <tag>&lt;/label&gt;</tag>
+  <tag>&lt;input</tag>
+    <attr>id</attr>=<str>"search-input"</str>
+    <attr>placeholder</attr>=<str>"Search..."</str>
+    <attr>type</attr>=<str>"text"</str>
+    <attr>name</attr>=<str>"text"</str>
+    <attr>class</attr>=<str>"input"</str>
+    <attr>aria-label</attr>=<str>"Search"</str>
+    <attr>autocomplete</attr>=<str>"off"</str>
+  <tag>/&gt;</tag>
+<tag>&lt;/div&gt;</tag></code></pre>
+  </section>
+
+  <footer class="creator">
+    <div class="creator-info">
+      <div class="avatar">CS</div>
+      <strong>CODING.STELLA</strong>
+    </div>
+    <div class="social-actions">
+      <button type="button" id="likeButton"><span>♥</span><small>LIKE</small></button>
+      <button type="button" id="saveButton"><span>▮</span><small>SAVE</small></button>
+      <button type="button" id="shareButton"><span>➤</span><small>SHARE</small></button>
+    </div>
+  </footer>
+  <p class="toast" id="toast" role="status"></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
